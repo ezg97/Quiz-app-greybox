@@ -3,12 +3,19 @@
     margin: 0%;
     padding: 0%;
   }
-  
+  html,body{
+    width: 100%;
+    height: 100%;
+    margin:0%;
+    padding:0%;
+  }
   /* ----------------banner---------------- */
   
   header{
+    height: 4%;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     border: 1px solid black;
   }
   
@@ -22,21 +29,61 @@
     content: "";
     margin-right: 15px;
   }
-  
-  /* ----------------content---------------- */
-  
-  main{
-    width: 500px;
-    margin-left: auto;
-    margin-right: auto;
+
+  /* ----------------main-------------------------*/
+  [role="main"]{
+    width: 100%;
+    height: 96%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 100px;
+    align-items: center;
+  }
+  /* ----------------Start/End/Result Screen---------------- */
+
+  .start-screen, .end-screen, .result-screen{
+    border: 1px solid grey;
+    padding: 5px;
+    border-radius: 15px;
+    width: 60%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    }
+
+  .start-screen button[type="button"],
+  .end-screen button[type="button"],
+  .result-screen button[type="button"]{
+    width: 50%;
+    margin-top: 10px;
+    font-style: bold;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    cursor: pointer;
+  }
+  .start-screen button[type="button"]:focus,
+  .end-screen button[type="button"]:focus,
+  .result-screen button[type="button"]:focus,
+  .start-screen button[type="button"]:hover,
+  .end-screen button[type="button"]:hover,
+  .result-screen button[type="button"]:hover{
+    background-color: grey;
+    color: white;
+  }
+
+  .result p span{
+    font-weight: bold;
   }
   
-  h2{
-    align-self: center;
+  /* ----------------QUIZ---------------- */
+  .quiz{
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   .quiz fieldset{
@@ -45,6 +92,13 @@
     padding: 0px;
     align-self: flex-start;
     display: flex;
+  }
+
+  .quiz legend{
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
   }
   
   label{
@@ -66,7 +120,6 @@
     cursor: pointer;
   }
   
-  /*  */
   label:hover, input[type="radio"]:checked,
   button[type="submit"]:focus,
   button[type="submit"]:hover{
@@ -76,3 +129,4 @@
   }
   
   
+ 
